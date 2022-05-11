@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: blue;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    h1 {
+        font-size: 68px;
+        font-weight: 800;
+    }
+
+    h2 {
+        font-size: 52px;
+        font-weight: 600;
+        position: relative;
+        top: 15px;
+        /* 15px down, moving from the top */
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: 500;
+        position: relative;
+        left: 15px;
+        bottom: 10px;
+    }
+
+    h4 {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    h5 {
+        font-size: 21px;
+        font-weight: 300;
+    }
+
+    h6 {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    #searchbar {
+        /* Absolute is ignored in the normal flow */
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+
+    section {
+        position: relative;
+    }
+
+    body {
+        min-height: 150vh;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: #767676;
+    }
+
+    nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+</style>
+
+<!-- 
+    CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. 
+    Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items 
+    sit within surrounding content (like images or spans). The default layout of elements in this way is called the normal flow of a document, 
+    but CSS offers the position property to override it.
+-->
+
+<body>
+
+    <header>
+        <h1>Welcome!</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p>I shift up when the #navbar is fixed to the browser window.</p>
+    
+    <h1>This is h1 text</h1>
+    <h2>This is h2 text</h2>
+    <h3>This is h3 text</h3>
+    <h4>This is h4 text</h4>
+    <h5>This is h5 text</h5>
+    <h6>This is h6 text</h6>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+    </p>
+
+    <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+
+    <h1>Welcome!</h1>
+    <section>
+        <form id="searchbar">
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+            <input type="submit" name="submit" value="Go!">
+        </form>
+    </section>
+</body>
+
+</html>
