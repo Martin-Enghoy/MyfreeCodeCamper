@@ -16,8 +16,10 @@
 
     .box {
         border-style: solid;
-        border-color: black;
+        /* border-color: black; */
+        border-color: #000000; /* <---- Hex for colors */
         border-width: 5px;
+        color: #F0F; /* <---- Abbreviated Hex for colors */
         text-align: center;
     }
 
@@ -27,18 +29,38 @@
     }
 
     .red-box {
-        background-color: crimson;
+        /* background-color: crimson; */
+        background-color: rgb(255,0,0); /* <--- RGB Values for colors */
         color: #fff;
-        padding: 20px;
+        /* padding: 20px; */
+        padding: 1.5em; /* em is relative to another length, based on the parent's font-size. */
         margin: 20px;
     }
 
     .blue-box {
         background-color: blue;
         color: #fff;
-        padding: 20px;
-        margin: 20px;
+        padding: 40px 20px 20px 40px; /* Assigned like a clock same as for margin */
+        margin: -15px; /* Fills the entire yellow box */
     }
+
+    [type = 'checkbox'] {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .pink-text {
+        color: pink !important;
+    }
+
+    /* 
+        // NOTES TAKEN FROM BASIC CSS MODULE \\
+        1.) .class declarations in css will override any general container declaration.
+        2.) The last declared .class in the css, put in the class=" " attribute will override like-values. (Ex. class="pink-text blue-text", where blue-text overrides pink-text) 
+        3.) #id declarations in css will override .class declarations when used. It takes precedence.
+        4.) Inline styles (style="color: green;") override the numbers 1-3.
+        5.) !important (color: pink !important;) will absolutely be followed above all else.
+     */
 </style>
 
 <body>
@@ -47,7 +69,7 @@
     <div class="box yellow-box">
         <h5 class="box red-box">padding</h5>
         <h5 class="box blue-box">padding</h5>
-    </div>F
+    </div>
 
 </body>
 
