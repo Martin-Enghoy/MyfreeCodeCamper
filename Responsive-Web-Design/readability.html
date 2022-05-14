@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+    Low contrast between the foreground and background colors can make text difficult to read. 
+    Sufficient contrast improves your content's readability, but what exactly does "sufficient" mean?
+
+    The Web Content Accessibility Guidelines (WCAG) recommend at least a 4.5 to 1 contrast ratio for normal text. 
+    The ratio is calculated by comparing the relative luminance values of two colors. This ranges from 1:1 for the same color, 
+    or no contrast, to 21:1 for white against black, the most substantial contrast. There are many contrast checking tools available online that calculate this ratio for you.
+-->
+
+<style>
+    body {
+        color: #636363;
+        /* 6:1 Ratio for contrast */
+        background-color: #FFF;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <article>
+        <h2>A Word on the Recent Catnip Doping Scandal</h2>
+        <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
+            competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to
+            the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green
+            stuff, at the Claw of Fury tournament.</p>
+        <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
+            influences. My own catnip use shall continue as purely recreational.</p>
+    </article>
+    <article>
+
+        <h2><a accesskey="g" id="first" href="#">The Garfield Files: Lasagna as Training Fuel?</a></h2>
+
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball
+            cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM
+            trifecta that is lasagna...</p>
+    </article>
+    <article>
+
+
+        <h2><a accesskey="c" id="second" href="#">Is Chuck Norris a Cat Person?</a></h2>
+
+
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+            that anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he
+            a cat person?...</p>
+    </article>
+
+    <section>
+        <form>
+            <p tabindex="0">Instructions: Fill in ALL your information then click <b>Submit</b></p>
+            <!-- 
+                Bonus - using tabindex also enables the CSS pseudo-class :focus to work on the p tag. 
+                tabindex="1" is first, tabindex="0" is last.
+            -->
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <fieldset>
+                <legend>What level ninja are you?</legend>
+                <input id="newbie" type="radio" name="levels" value="newbie">
+                <label for="newbie">Newbie Kitten</label><br>
+                <input id="intermediate" type="radio" name="levels" value="intermediate">
+                <label for="intermediate">Developing Student</label><br>
+                <input id="master" type="radio" name="levels" value="master">
+                <label for="master">9th Life Master</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Select your favorite weapons:</legend>
+                <input id="stars" type="checkbox" name="weapons" value="stars">
+                <label for="stars">Throwing Stars</label><br>
+                <input id="nunchucks" type="checkbox" name="weapons" value="nunchucks">
+                <label for="nunchucks">Nunchucks</label><br>
+                <input id="sai" type="checkbox" name="weapons" value="sai">
+                <label for="sai">Sai Set</label><br>
+                <input id="sword" type="checkbox" name="weapons" value="sword">
+                <label for="sword">Sword</label>
+            </fieldset>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form><br>
+    </section>
+
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+
+</html>
