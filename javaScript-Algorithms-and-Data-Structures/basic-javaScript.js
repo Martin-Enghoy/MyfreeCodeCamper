@@ -87,3 +87,24 @@ console.log(myStream)
 const spaceSample = "FirstLine\n\t\\SecondLine\nThirdLine";
 console.log(spaceSample)
 
+// Concatenate Strings
+//
+// In JavaScript, String values are immutable, 
+// which means that they cannot be altered once created.
+// Although it can be assigned a new string depending on its declaration.
+
+const myFirst = 'Martin' + ' ' + 'Adrian';
+console.log(myFirst)
+let myDream = " Software Engineer."
+let myGoal = 'Japan';
+// myGoal += ' and Korea.';
+myGoal += ' and Korea.' + myDream + " I hope I can attain it.";  // Construct string using a variable.
+myGoal += myDream;
+console.log(myGoal)
+console.log(myGoal.length)                                      // Find the length of a string.
+const firstLetter = myGoal[0];                                  // Find first letter of the string.
+console.log(firstLetter)
+const thirdLetter = myGoal[2];                                  // Find third letter of the string.
+console.log(thirdLetter)
+const lastLetter = myGoal[myGoal.length - 1];                                  // Find first letter of the string.
+console.log(lastLetter)
