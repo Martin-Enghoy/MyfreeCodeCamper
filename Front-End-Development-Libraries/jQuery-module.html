@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="">
+    <script>
+        // Now let's write our first jQuery statement. All jQuery functions start with a $, 
+        // Usually referred to as a dollar sign operator, or as bling.
+
+        $(document).ready(function () {
+            $("button").addClass("animated bounce");    // This line needs jQuery library + Animated.css
+
+            // You just used jQuery's .addClass() function, which allows you to add classes to elements.
+
+            $(".well").addClass("animated shake");      // Can be added to specific classes using the . notation like in css.
+
+            $("#target3").addClass("animated fadeOut"); // this time for an # id 
+            
+            // The example below overlaps with buttons as a type, .btn as a class and #target1 as an id.
+            // $("button").addClass("animated");
+            // $(".btn").addClass("shake");
+            // $("#target1").addClass("btn-primary");
+
+            $("#target2").removeClass("btn-default");   // after addClass() comes removeClass() which, of course, removes their class.
+
+            $("#target1").css("color", "red");          // .css() - directly changes the css of the target. As long as you know its property, you can change it directly.
+
+            $("#target1").prop("disabled", true);       // .prop() - changes the value of a css property of the target.
+
+            $("#target4").html("<em>#target4</em>");    // .html() - replaces entirely the content within #target4's block with the value of the .html() function.
+
+            $("#target5").text("#targetx");             // .text() - without html tags, this only replaces the text content within the $target5 block without html tags.
+            
+            $("#target3").remove();                     // .remove() - removes the html block entirely.
+
+            $("#target6").appendTo("#left-well");       // .appendTo() - moves the html block to a different div
+        });
+
+
+
+
+    </script>
+
+    <!-- Only change code above this line -->
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target bg-dark text-white" id="target1">#target1</button>
+                    <button class="btn btn-default target bg-dark text-white" id="target2">#target2</button>
+                    <button class="btn btn-default target bg-dark text-white" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target bg-dark text-white" id="target4">#target4</button>
+                    <button class="btn btn-default target bg-dark text-white" id="target5">#target5</button>
+                    <button class="btn btn-default target bg-dark text-white" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</html>
