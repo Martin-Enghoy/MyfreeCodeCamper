@@ -1,4 +1,7 @@
-from django.shortcuts import render
+import email
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, auth
+from django.contrib import messages
 from django.http import HttpResponse
 
 # Create your views here.
@@ -10,4 +13,28 @@ def crop(request):
     return render(request, 'crop.html')
 
 def signup(request):
-    return render(request, 'signup.html')
+
+    if request.method == 'POST':
+        email = request.POST['email']
+        username = request.POST['username']
+        password = request.POST['password']
+        confirm = request.POST['confirm']
+
+        if password == confirm:
+            if User.objects.filter(email=email).exists():
+                messages.info(request, 'Email is already taken.')
+                return redirect('signup')
+            elif User.objects.filter(username=username).exists():
+                messages.info(request, 'Username is already taken.')
+                return redirect('signup')
+            else:
+                user = User.object.create_user(email=email, username=username, password=password)
+                user.save()
+
+
+        else:
+            messages.info(request, 'Password does not match.')
+            return redirect('signup')
+            
+    else:
+        return render(request, 'signup.html')

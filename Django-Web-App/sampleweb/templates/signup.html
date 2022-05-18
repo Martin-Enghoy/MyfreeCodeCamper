@@ -188,17 +188,18 @@
 
 
         <div class="container text-center">
-            <form action="" class="form-floating">
+            <form action="" class="form-floating" method="POST">
+                {% csrf_token %}
                 <div class="row gy-3">
                     <div class="form-floating col-4 mx-auto">
-                        <input class="form-control form-control-md mx-auto" type="email" name="username" id="username"
+                        <input class="form-control form-control-md mx-auto" type="email" name="email" id="username"
                             placeholder="Your Email..." required>
                         <label class="mx-2" for="username">Enter your Email:</label>
                     </div>
                 </div>
                 <div class="row gy-3 my-1">
                     <div class="form-floating col-4 mx-auto">
-                        <input class="form-control form-control-md mx-auto" type="text" name="password" id="password"
+                        <input class="form-control form-control-md mx-auto" type="text" name="username" id="username"
                             placeholder="Your Password..." required>
                         <label class="mx-2" for="password">Enter your Username:</label>
                     </div>
