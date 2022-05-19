@@ -1,4 +1,3 @@
-
 //  GLOBAL SCOPE EXAMPLE
 //      GLOBAL VARIABLES HERE 
 //      When declaring outside a function, all variables are used globally.

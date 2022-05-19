@@ -25,3 +25,30 @@ function timesFive(num){
 }
 
 console.log("The product is",timesFive(2));
+
+/////////////////////////////////////////////////////
+
+//  NO RETURN, NO ARGS FUNCTIONS - Returns Undefined
+let sum = 0;
+
+function addThree() {
+    sum = sum + 3;
+}
+
+function addFive() {
+    sum = sum + 5;
+}
+addThree();
+console.log(addFive());     // Undefined
+
+/////////////////////////////////////////////////////
+
+//  FUNCTION USED AS ASSIGNMENT TO A VARIABLE
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7);
+console.log(processed);

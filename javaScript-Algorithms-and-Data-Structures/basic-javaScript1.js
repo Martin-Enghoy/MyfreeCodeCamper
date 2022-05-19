@@ -61,7 +61,9 @@ console.log(myScore)
 
 /////////////////////////////////////////////////////
 
-// DECIMAL DATA TYPE AND OPERATIONS
+//  JAVASCRIPT DATA TYPES
+
+//      DECIMAL DATA TYPE AND OPERATIONS
 const myDecimal = 3.9;
 
 const myPizza = 2.2 * myDecimal;
@@ -69,6 +71,13 @@ console.log(myPizza)
 
 const myPie = 5.5 / myDecimal;
 console.log(myPie)
+
+//      BOOLEAN DATA TYPE
+function welcomeToBooleans(){
+    // return false;
+    return true;
+}
+
 
 /////////////////////////////////////////////////////
 
@@ -159,7 +168,7 @@ const removedValue = firstArray.pop();
 console.log(removedValue)
 console.log(firstArray)
 
-//      .shift() to remvoe values at the FRONT of the array.
+//      .shift() to remove values at the FRONT of the array.
 const removedValue2 = firstArray.shift();
 console.log(removedValue2)
 console.log(firstArray)
