@@ -218,6 +218,13 @@
                         <label class="mx-2" for="confirm">Confirm Password:</label>
                     </div>
                 </div>
+                <div class="row gy-3 my-1">
+                    <div class="form-floating col-4 mx-auto">
+                        {% for messages in messages %}
+                        <h5 class="text-danger">{{message}}</h5>
+                        {% end for %}
+                    </div>
+                </div>
                 <div class="row gy-3 mt-1">
                     <div class="col-3 mx-auto">
                         <button type="submit" class="btn btn-primary mb-3">Register</button>
