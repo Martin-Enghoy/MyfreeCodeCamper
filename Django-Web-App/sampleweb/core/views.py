@@ -47,7 +47,8 @@ def signup(request):
     else:
         return render(request, 'signup.html')
 
-    # def login(request):
-        
-    #     if request.method == 'POST':
-    #         if passw
+def login(request):
+    
+    if request.method == 'POST':
+        pass
+    return render(request,'login.html')
