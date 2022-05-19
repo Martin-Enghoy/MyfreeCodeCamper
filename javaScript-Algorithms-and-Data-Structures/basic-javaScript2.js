@@ -6,6 +6,7 @@ function reusableFunction() {
 //  JAVASCRIPT FUNCTION CALL
 reusableFunction();
 
+/////////////////////////////////////////////////////
 
 //  JAVASCRIPT FUNCTION WITH ARGS
 //  Calling the function will print the sum of the two number args
@@ -16,6 +17,7 @@ function functionWithArgs(num1, num2) {
 
 functionWithArgs(2, 3);
 
+/////////////////////////////////////////////////////
 
 //  JAVASCRIPT FUNCTION WITH ARGS AND RETURN
 function timesFive(num){

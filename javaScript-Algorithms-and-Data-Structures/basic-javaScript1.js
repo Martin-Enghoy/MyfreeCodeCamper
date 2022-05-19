@@ -27,6 +27,7 @@ console.log(myWord)
 const POWER = 42; // const declaration is the same as let declaration but it is read-only. const declarations should be all caps to signify immutable values.
 console.log(POWER)
 
+/////////////////////////////////////////////////////
 
 // OPERATIONS
 const LEVEL = 10 + 10;
@@ -44,6 +45,8 @@ console.log(SLOW)
 const MANA_REGEN = 100 % 3;
 console.log(MANA_REGEN)
 
+/////////////////////////////////////////////////////
+
 // INCREMENT/DECREMENT : the same as i++/i--;
 myScore++;
 myScore--;
@@ -56,6 +59,7 @@ console.log(myScore)
 myScore /= 3;
 console.log(myScore)
 
+/////////////////////////////////////////////////////
 
 // DECIMAL DATA TYPE AND OPERATIONS
 const myDecimal = 3.9;
@@ -66,6 +70,7 @@ console.log(myPizza)
 const myPie = 5.5 / myDecimal;
 console.log(myPie)
 
+/////////////////////////////////////////////////////
 
 // ESCAPING STRING LITERALS
 // Single and double quotes in strings are the same in javaScript, as long as you start and end with the same.
@@ -86,6 +91,8 @@ const myStream = 'I streamed for 4 hours last night.';
 console.log(myStream)
 const spaceSample = "FirstLine\n\t\\SecondLine\nThirdLine";
 console.log(spaceSample)
+
+/////////////////////////////////////////////////////
 
 // CONCATENATE STRINGS
 //
@@ -108,6 +115,8 @@ const thirdLetter = myGoal[2];                                  // Find third le
 console.log(thirdLetter)
 const lastLetter = myGoal[myGoal.length - 1];                                  // Find first letter of the string.
 console.log(lastLetter)
+
+/////////////////////////////////////////////////////
 
 // JAVASCRIPT ARRAYS
 // 1.) Like other programming languages, array indexes in jS starts at 0
