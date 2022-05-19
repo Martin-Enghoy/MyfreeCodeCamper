@@ -3,12 +3,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .models import userProfile
 
 # Create your views here.
+@login_required(login_url='login')
 def home(request):
     # return HttpResponse('<h1>Welcome to Home Grown Hydroponics Web App!</h1>')
-    return render(request, 'homepage.html') 
+    return render(request, 'home.html') 
 
 def crop(request):
     return render(request, 'crop.html')
@@ -50,5 +52,23 @@ def signup(request):
 def login(request):
     
     if request.method == 'POST':
-        pass
-    return render(request,'login.html')
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        # If the user is found in the database (not None)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')        # Takes the user to the home page or ('') blank in urls
+        else:
+            messages.info(request, 'User does not exist / Incorrect Input')
+            return redirect('login')
+
+    else:
+        return render(request,'login.html')
+
+@login_required(login_url='login')
+def logout(request):
+    auth.logout(request)
+    return redirect('login')
