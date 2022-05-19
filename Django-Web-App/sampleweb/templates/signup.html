@@ -185,8 +185,9 @@
                 </div>
             </div>
         </div> -->
-
-
+        <!-- <div class="container text-justified">
+            
+        </div> -->
         <div class="container text-center">
             <form action="" class="form-floating" method="POST">
                 {% csrf_token %}
@@ -219,10 +220,10 @@
                     </div>
                 </div>
                 <div class="row gy-3 my-1">
-                    <div class="form-floating col-4 mx-auto">
-                        {% for messages in messages %}
-                        <h5 class="text-danger">{{message}}</h5>
-                        {% end for %}
+                    <div class="col-4 mx-auto">
+                        {% for message in messages %}
+                        <h5 class="text-danger text-justify">{{message}}</h5>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="row gy-3 mt-1">
