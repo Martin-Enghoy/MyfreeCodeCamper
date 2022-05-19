@@ -29,7 +29,7 @@ def signup(request):
                 messages.info(request, 'Username is already taken.')
                 return redirect('signup')
             else:
-                user = User.object.create_user(email=email, username=username, password=password)
+                user = User.objects.create_user(email=email, username=username, password=password)
                 user.save()
 
                 #User Login and Redirect to Settings Page
