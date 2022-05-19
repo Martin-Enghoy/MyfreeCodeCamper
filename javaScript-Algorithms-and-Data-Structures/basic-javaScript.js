@@ -6,10 +6,10 @@
     cool cool
 */
 
-// *** Declare and Assign Var ***
+// DECLARE AND ASSIGN VARIABLES
 // 1.) Initializing a var without a value will set it to undefined. It will return NaN if it is used in a mathematical operation.
 // 2.) JavaScript is case-sensitive. MyVar is not the same as myvar. camelCase preferred.
-var myNum; 
+var myNum;
 var myNum2;
 
 myNum = 9;
@@ -18,7 +18,7 @@ myNum = myNum2;
 var myScore = 10;
 
 var myFirstName = "Martin Adrian"
-var myLastName = "Enghoy"   
+var myLastName = "Enghoy"
 
 let myWord = "Cool";
 // let myWord = "Not"; // This declaration after the first let will result to an error. A feature of the ES6 update in avoiding multiple declarations.
@@ -28,7 +28,7 @@ const POWER = 42; // const declaration is the same as let declaration but it is 
 console.log(POWER)
 
 
-// Operations
+// OPERATIONS
 const LEVEL = 10 + 10;
 console.log(LEVEL)
 
@@ -44,8 +44,8 @@ console.log(SLOW)
 const MANA_REGEN = 100 % 3;
 console.log(MANA_REGEN)
 
-// Increment/Decrement : the same as i++/i--;
-myScore++; 
+// INCREMENT/DECREMENT : the same as i++/i--;
+myScore++;
 myScore--;
 myScore += 5;
 console.log(myScore)
@@ -57,7 +57,7 @@ myScore /= 3;
 console.log(myScore)
 
 
-// Decimal Data type and Operations
+// DECIMAL DATA TYPE AND OPERATIONS
 const myDecimal = 3.9;
 
 const myPizza = 2.2 * myDecimal;
@@ -67,7 +67,7 @@ const myPie = 5.5 / myDecimal;
 console.log(myPie)
 
 
-// Escaping string literals 
+// ESCAPING STRING LITERALS
 // Single and double quotes in strings are the same in javaScript, as long as you start and end with the same.
 //
 //      Escape Sequences:
@@ -87,7 +87,7 @@ console.log(myStream)
 const spaceSample = "FirstLine\n\t\\SecondLine\nThirdLine";
 console.log(spaceSample)
 
-// Concatenate Strings
+// CONCATENATE STRINGS
 //
 // In JavaScript, String values are immutable, 
 // which means that they cannot be altered once created.
@@ -108,3 +108,47 @@ const thirdLetter = myGoal[2];                                  // Find third le
 console.log(thirdLetter)
 const lastLetter = myGoal[myGoal.length - 1];                                  // Find first letter of the string.
 console.log(lastLetter)
+
+// JAVASCRIPT ARRAYS
+// 1.) Like other programming languages, array indexes in jS starts at 0
+// 2.) Entries in arrays are mutable. It can be changed freely despite it having declared as const.
+const firstArray = ["This is a string.", 5];
+const multiArray = [["This is a", 1], ["string.", 2]];
+const myPhrase = firstArray[0];                         // First index of firstArray
+firstArray[1] = 9;                                      // Second index of firstArray will be changed to the value of '9'
+console.log(firstArray)
+
+//      MULTI-DIMENSIONAL ARRAYS
+const multiDimensional = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14],
+];
+
+const myPick = multiDimensional[2][1];
+console.log(myPick)
+
+
+//      .push() to append values into the END of the array
+firstArray.push(12);
+firstArray.push(15);
+firstArray.push(18);
+firstArray.push(21);
+console.log(firstArray)
+
+//      .unshift() to append values into the FRONT of the array
+firstArray.unshift(6);
+firstArray.unshift(3);
+console.log(firstArray)
+
+
+//      .pop() to remove values at the END of the array | any type will be removed.
+const removedValue = firstArray.pop();
+console.log(removedValue)
+console.log(firstArray)
+
+//      .shift() to remvoe values at the FRONT of the array.
+const removedValue2 = firstArray.shift();
+console.log(removedValue2)
+console.log(firstArray)
