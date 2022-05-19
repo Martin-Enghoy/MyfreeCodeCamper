@@ -129,6 +129,8 @@ const multiDimensional = [
 const myPick = multiDimensional[2][1];
 console.log(myPick)
 
+const myShoppingList = [["Onions", 2],["Garlic",3],["Bell Peppers", 4],["Cheese",5],["Butter",6]];
+
 
 //      .push() to append values into the END of the array
 firstArray.push(12);
