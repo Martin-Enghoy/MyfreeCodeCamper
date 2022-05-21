@@ -21,6 +21,8 @@ function fun2() {
 
 fun2();
 
+/////////////////////////////////////////////////////
+
 //  LOCAL SCOPE EXAMPLE
 function myLocalScope() {
     const myVar = 5;
@@ -32,6 +34,7 @@ myLocalScope();
 // myVar is not defined outside of myLocalScope
 // console.log('outside myLocalScope', myVar);
 
+/////////////////////////////////////////////////////
 
 //  GLOBAL VS. LOCAL SCOPE EXAMPLE - Declaration of the SAME Variable
 const outerWear = "T-Shirt";
