@@ -12,6 +12,13 @@ def home(request):
     # return HttpResponse('<h1>Welcome to Home Grown Hydroponics Web App!</h1>')
     return render(request, 'home.html') 
 
+#   First page of Planting Environment Settings
+@login_required(login_url='login')
+def settings(request):
+    return render(request, 'nodes.html') 
+
+
+@login_required(login_url='login')
 def crop(request):
     return render(request, 'crop.html')
 
