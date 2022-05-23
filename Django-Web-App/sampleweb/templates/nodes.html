@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page: AISL-3-2021-C1</title>
+    <title>Node Settings: AISL-3-2021-C1</title>
     <link rel="stylesheet" href="{% static '/bootstrap/dist/css/bootstrap.css' %}">
 </head>
 
@@ -84,92 +84,68 @@
     <!-- Banner below Nav bar -->
     <header>
         <div class="my-5">
-            <h1>This should contain the banner for Nodes page</h1>
+            <h1>(1.) Settings, p.1 - Nodes</h1>
         </div>
     </header>
 
-    <!-- Cards for displaying stats -->
-    <div class="container">
-        <!-- Card Group housing one stat each -->
-        <div class="container my-5">
-            <div class="row">
-                <!-- <div class="col-4"></div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div> -->
-                <div class="card-group">
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+    <div class="container text-justify">
+        <form action="" class="form-floating" method="POST">
+            {% csrf_token %}
+            <div class="row gy-3">
+                <div class="col-1 mt-4">
+                    <label for="node1">Node 1:</label>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="col-5 me-auto">
+                    <!-- <input class="form-control form-control-md me-auto" type="" name="email" id="node1"
+                        placeholder="Your Email..." required> -->
+                    <select name="node1" id="node1" class="form-select">
+                        <option selected value="None">None</option>
+                        <option selected value="Lettuce">Lettuce</option>
+                        <option selected value="Spinach">Spinach</option>
+                        <option selected value="Komatsuna">Komatsuna</option>
+                    </select>
 
-    <!-- Second row of Hydroponic Stats -->
-    <div class="container">
-        <!-- Card Group housing one stat each -->
-        <div class="container my-5">
-            <div class="row">
-                <!-- <div class="col-4"></div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div> -->
-                <div class="card-group">
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+            <div class="row gy-3 my-1">
+                <div class="form-floating col-4 me-auto">
+                    <input class="form-control form-control-md mx-auto" type="text" name="username" id="username"
+                        placeholder="Your Password..." required>
+                    <label class="mx-2" for="password">Enter your Username:</label>
+                </div>
+            </div>
+            <div class="row gy-3 my-1">
+                <div class="form-floating col-4 me-auto">
+                    <input class="form-control form-control-md mx-auto" type="password" name="password" id="password"
+                        placeholder="Your Password..." required>
+                    <label class="mx-2" for="password">Enter your Password:</label>
+                </div>
+            </div>
+            <div class="row gy-3 my-1">
+                <div class="form-floating col-4 me-auto">
+                    <input class="form-control form-control-md mx-auto" type="password" name="confirm" id="confirm"
+                        placeholder="Confirm Password:" required>
+                    <label class="mx-2" for="confirm">Confirm Password:</label>
+                </div>
+            </div>
+            <div class="row gy-3 my-1">
+                <div class="col-4 me-auto">
+                    {% for message in messages %}
+                    <h5 class="text-danger text-justify">{{message}}</h5>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row gy-3 mt-1">
+                <div class="col-3 me-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Register</button>
+                </div>
+            </div>
+            <div class="row gy-3 my-1">
+                <div class="col-3 me-auto">
+                    <h6 class="text-secondary">Already have an account? <a href="login">Login here.</a></h6>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 
