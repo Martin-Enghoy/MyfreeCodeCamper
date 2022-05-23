@@ -21,9 +21,6 @@ def nodes(request):
 def params(request):
     return render(request, 'params.html') 
 
-
-
-
 @login_required(login_url='login')
 def crop(request):
     return render(request, 'crop.html')
@@ -48,12 +45,15 @@ def signup(request):
                 user.save()
 
                 #User Login and Redirect to Settings Page
+                user_login = auth.authenticate(username=username, password=password)
+                auth.login(request, user_login)
+
 
                 #Create a Profile Object for the new user
                 user_model = User.objects.get(username=username)
                 new_profile = userProfile.objects.create(user=user_model, id_user=user_model.id)
                 new_profile.save()
-                return redirect('signup')
+                return redirect('settings/nodes')
 
         else:
             messages.info(request, 'Password does not match.')
