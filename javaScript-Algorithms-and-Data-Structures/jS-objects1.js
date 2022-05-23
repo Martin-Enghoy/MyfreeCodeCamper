@@ -1,5 +1,6 @@
 //  JAVASCRIPT OBJECTS WOOOOOOOO
-//       1.) If your object has any non-string properties, JavaScript will automatically typecast them as strings.
+//      1.) If your object has any non-string properties, JavaScript will automatically typecast them as strings.
+//      2.) JSON IS ACTUALLY JAVASCRIPT OBJECT NOTATION
 
 const myDog = {
     name: "Sky",
@@ -116,3 +117,30 @@ function checkObj(obj, checkProp) {
         return "Not Found";
     }
 }
+
+/////////////////////////////////////////////////////
+
+// COMPLEX OBJECT DECLARATION WITHIN ARRAY
+const myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+    {
+        "artist": "As It Is",
+        "title": "Okay - Acoustic Version",
+        "release_year": 2019,
+        "formats": [
+            "Spotify",
+            "Apple Music",
+            "Youtube"
+        ],
+    }
+];
