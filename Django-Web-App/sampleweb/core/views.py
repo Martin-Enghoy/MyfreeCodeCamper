@@ -14,8 +14,14 @@ def home(request):
 
 #   First page of Planting Environment Settings
 @login_required(login_url='login')
-def settings(request):
+def nodes(request):
     return render(request, 'nodes.html') 
+
+@login_required(login_url='login')
+def params(request):
+    return render(request, 'params.html') 
+
+
 
 
 @login_required(login_url='login')

@@ -84,92 +84,95 @@
     <!-- Banner below Nav bar -->
     <header>
         <div class="my-5">
-            <h1>This should contain the banner for Params page</h1>
+            <h1>(2.) Settings, p.2 - Parameters</h1>
         </div>
     </header>
-
-    <!-- Cards for displaying stats -->
-    <div class="container">
-        <!-- Card Group housing one stat each -->
-        <div class="container my-5">
-            <div class="row">
-                <!-- <div class="col-4"></div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div> -->
-                <div class="card-group">
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row gy-3">
+            <div class="col-auto ms-4 mt-4">
+                <h2 class="text-primary">
+                    Node #1 - Lettuce (should reflect Django)
+                </h2>
+            </div>
+        </div>
+        <div class="row gy-3 ms-2">
+            <div class="col-auto ms-4 mt-4">
+                <h4 class="text-justify">
+                    Water Temperature:
+                </h4>
+            </div>
+            <div class="col-auto ms-4 mt-4">
+                <p class="text-success">
+                    (Show Values here)
+                </p>
             </div>
         </div>
     </div>
 
-    <!-- Second row of Hydroponic Stats -->
-    <div class="container">
-        <!-- Card Group housing one stat each -->
-        <div class="container my-5">
-            <div class="row">
-                <!-- <div class="col-4"></div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div> -->
-                <div class="card-group">
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+
+
+    <div class="container text-justify mt-5">
+        <form action="" class="form-floating" method="POST">
+            {% csrf_token %}
+
+            <div class="row gy-3">
+                <div class="col-1 mt-4">
+                    <label for="node1">Node 1:</label>
+                </div>
+                <div class="col-5 me-auto">
+                    <!-- <input class="form-control form-control-md me-auto" type="" name="email" id="node1"
+                        placeholder="Your Email..." required> -->
+                    <select name="node1" id="node1" class="form-select">
+                        <option selected value="None">None</option>
+                        <option value="Lettuce">Lettuce</option>
+                        <option value="Spinach">Spinach</option>
+                        <option value="Komatsuna">Komatsuna</option>
+                    </select>
                 </div>
             </div>
-        </div>
+            <div class="row gy-3 mt-auto">
+                <div class="col-1 mt-4">
+                    <label for="node1">Node 2:</label>
+                </div>
+                <div class="col-5 me-auto">
+                    <!-- <input class="form-control form-control-md me-auto" type="" name="email" id="node1"
+                        placeholder="Your Email..." required> -->
+                    <select name="node1" id="node1" class="form-select">
+                        <option selected value="None">None</option>
+                        <option value="Lettuce">Lettuce</option>
+                        <option value="Spinach">Spinach</option>
+                        <option value="Komatsuna">Komatsuna</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row gy-3 mt-auto">
+                <div class="col-1 mt-4">
+                    <label for="node1">Node 3:</label>
+                </div>
+                <div class="col-5 me-auto">
+                    <!-- <input class="form-control form-control-md me-auto" type="" name="email" id="node1"
+                        placeholder="Your Email..." required> -->
+                    <select name="node1" id="node1" class="form-select">
+                        <option selected value="None">None</option>
+                        <option value="Lettuce">Lettuce</option>
+                        <option value="Spinach">Spinach</option>
+                        <option value="Komatsuna">Komatsuna</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row gy-3 my-1">
+                <div class="col-4 me-auto">
+                    {% for message in messages %}
+                    <h5 class="text-danger text-justify">{{message}}</h5>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row gy-3 mt-1">
+                <div class="col-2 mx-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Save & Next</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 
