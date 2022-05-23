@@ -120,7 +120,7 @@ function checkObj(obj, checkProp) {
 
 /////////////////////////////////////////////////////
 
-// COMPLEX OBJECT DECLARATION WITHIN ARRAY
+//  COMPLEX OBJECT DECLARATION WITHIN ARRAY
 const myMusic = [
     {
         "artist": "Billy Joel",
@@ -144,3 +144,44 @@ const myMusic = [
         ],
     }
 ];
+
+/////////////////////////////////////////////////////
+
+//  ACCESSING NESTED OBJECTS 
+const myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+/////////////////////////////////////////////////////
+
+//  ACCESSING NESTED ARRAYS
+const myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+//      set the variable secondTree to the second item in the trees list from the myPlants object.
+const secondTree = myPlants[1].list[1];
