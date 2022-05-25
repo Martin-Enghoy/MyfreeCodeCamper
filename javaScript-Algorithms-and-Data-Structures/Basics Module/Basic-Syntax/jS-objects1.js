@@ -104,7 +104,7 @@ function phoneticLookup(val) {
     return result;
 }
 
-phoneticLookup("charlie");
+console.log(phoneticLookup("charlie"));
 
 /////////////////////////////////////////////////////
 
@@ -185,3 +185,8 @@ const myPlants = [
 ];
 //      set the variable secondTree to the second item in the trees list from the myPlants object.
 const secondTree = myPlants[1].list[1];
+myPlants[1]["name"] = "Marty";          // Appends the undeclared property to the end of the targeted object.
+myPlants[1]["array"] = ["plants"];
+// myPlants[1]["array"].push("plants");
+myPlants[1]["array"].push("bees");
+console.log(myPlants);
