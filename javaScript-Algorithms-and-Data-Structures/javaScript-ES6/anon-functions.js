@@ -11,7 +11,3 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 //  With a default parameter
 //  adding default parameters so that it will add 1 to number if value is not specified.s
 const increment = (number, value = 1) => number + value;
-
-//  Rest Parameter to accept a larger number of arguments into the Function
-//      function sum is able to take any number of arguments and return their sum.
-const sum = (...args) => args.reduce((a, b) => a + b, 0);
