@@ -5,10 +5,12 @@ function countdown(n) {
         return [];
     }
     else {
-        const countDown = countdown(n - 2);
-        countDown.push(n);
+        const countDown = countdown(n - 1);
+        countDown.unshift(n);
         return countDown;
     }
 }
 
 console.log(countdown(7));
+console.log(countdown(10));
+console.log(countdown(-1));
