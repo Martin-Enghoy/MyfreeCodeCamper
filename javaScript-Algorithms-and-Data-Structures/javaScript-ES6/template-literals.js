@@ -5,8 +5,8 @@ const result = {
     success: ["max-length", "no-amd", "prefer-arrow-functions"],
     failure: ["no-var", "var-on-top", "linebreak"],
     skipped: ["no-extra-semi", "no-dup-keys"]
-  };
-  function makeList(arr) {
+};
+function makeList(arr) {
     // const failureItems = [
     //   `<li class="text-warning">${result.arr[0]}</li>`,
     //   `<li class="text-warning">${result.arr[1]}</li>`,
@@ -14,10 +14,10 @@ const result = {
     // ];
     const failureItems = [];
     for (let i = 0; i < arr.length; i++) {
-      failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
     }
 
     return failureItems;
-  }
-  
-  const failuresList = makeList(result.failure);
+}
+
+const failuresList = makeList(result.failure);
