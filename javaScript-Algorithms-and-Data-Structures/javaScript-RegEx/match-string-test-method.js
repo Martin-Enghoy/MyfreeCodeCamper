@@ -53,12 +53,13 @@ let result9 = quoteSample2.match(alphabetRegex);
 //  Range of letters and numbers
 let quoteSample3 = "Blueberry 3.141592653s are delicious.";
 let myRegex2 = /[h-s2-6]/gi;
-let result10 = quoteSample3.match(myRegex22);
+let result10 = quoteSample3.match(myRegex2);
 
 //  Negated Character set
 let quoteSample4 = "3 blind mice.";
-let myRegex3 = /[^aeiou0-9]/gi;
+let myRegex3 = /[^aeiou0-9]mice/gi;
 let result11 = quoteSample4.match(myRegex3); 
+console.log(result11)
 
 //  Occurring more than once in one word
 let difficultSpelling = "Mississippi";
@@ -70,7 +71,7 @@ let result12 = difficultSpelling.match(myRegex4);
 //          Your regex should not match any characters in the string He made a fair move. Screaming about it can't help you.
 //          Your regex should not match any characters in the string Let him have it. It's not wise to upset a Wookiee.
 let chewieRegex = /Aa*/; 
-let result13 = chewieQuote.match(chewieRegex);
+// let result13 = chewieQuote.match(chewieRegex);
 
 //  Lazy Matching - only gets the shortest
 //      In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match.
