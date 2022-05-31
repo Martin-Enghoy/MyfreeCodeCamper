@@ -59,3 +59,38 @@ function forecast(arr) {
 }
 
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+// Spread Operator to copy entire arrays
+function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+        newArr.push([...arr]);
+        num--;
+    }
+    return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+
+// Spread Operator to add items in between
+function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning', ...fragment, 'is', 'fun'];
+    return sentence;
+}
+
+console.log(spreadOut());
+
+
+// indexOf() used for array item existence
+function quickCheck(arr, elem) {
+    if (arr.indexOf(elem) != -1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
