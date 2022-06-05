@@ -17,10 +17,14 @@ dog.sayLegs();
 function Dog() {
     this.name = "Sky";
     this.color = "Brownish White";
-    this.numLegs = 4;
+    // this.numLegs = 4;
 }
 
 let hound = new Dog();
+
+// Prototyping || Properties in the prototype are shared among ALL instances
+//  This is a separate declaration outside a property
+Dog.prototype.numLegs = 4;
 
 
 // Own Properties check
