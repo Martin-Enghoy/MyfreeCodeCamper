@@ -20,6 +20,7 @@ let result3 = petRegex.test(petString);
 let myString2 = "freeCodeCamp";
 let fccRegex = /freecodecamp/i; 
 let result4 = fccRegex.test(myString2);
+console.log(result4);
 
 //  Extract Matches with .match()
 //      the .match syntax is the "opposite" of the .test method you have been using thus far:
