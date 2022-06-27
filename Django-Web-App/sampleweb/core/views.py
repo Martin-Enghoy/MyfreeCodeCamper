@@ -6,6 +6,10 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import userProfile
 
+'''
+    Possible to assign values from Django HTML to be used on the Automation
+'''
+
 # Create your views here.
 @login_required(login_url='login')
 def home(request):
