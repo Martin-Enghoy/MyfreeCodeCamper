@@ -90,11 +90,28 @@
             .enter()
             .append("div")
             .attr("class", "bar")
-            .style("margin", "2px") 
-            .style("height", (d) => (d * 10 + "px")) 
+            .style("margin", "2px")
+            .style("height", (d) => (d * 10 + "px"))
 
-        
-            
+        // SVG is used to make common geometric shapes. 
+        // Since D3 maps data into a visual representation, 
+        // it uses SVG to create the shapes for the visualization. 
+        // SVG shapes for a web page must go within an HTML svg tag.
+
+        // Appending SVG
+        const w = 500;
+        const h = 100;
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h)
+            .append("rect")
+            .attr("width", 25)      // Attributes of the last append: rect
+            .attr("height", 100)
+            .attr("x", 0)
+            .attr("y", 0)
+
     </script>
 </body>
 
