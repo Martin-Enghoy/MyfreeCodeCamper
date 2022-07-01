@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scatterplot</title>
+    <title>Dynamic Scales</title>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 
@@ -24,30 +24,26 @@
             [21, 123]
         ];
 
-
         const w = 500;
         const h = 500;
 
-        const svg = d3.select("body")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h);
+        // Padding between the SVG canvas boundary and the plot
+        const padding = 30;
 
-        svg.selectAll("circle")
-            .data(dataset)
-            .enter()
-            .append("circle")
-            .attr("cx", (d, i) => d[0])
-            .attr("cy", (d, i) => h - d[1])
-            .attr("r", 5);
+        // Create an x and y scale
 
-        svg.selectAll("text")
-            .data(dataset)
-            .enter()
-            .append("text")
-            .text((d, i) => d[0] + ", " + d[1])
-            .attr("x", (d, i) => d[0] + 5)
-            .attr("y", (d, i) => h - d[1]);
+        const xScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset, (d) => d[0])])
+            .range([padding, w - padding]);
+
+        const yScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset, (d) => d[1])])
+            .range([h - padding, padding]);
+
+        const output = yScale(411); // Returns 30
+        d3.select("body")
+            .append("h2")
+            .text(output)
     </script>
 </body>
 
