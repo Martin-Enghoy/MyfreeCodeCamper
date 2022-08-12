@@ -1,0 +1,25 @@
+:root {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Soft", sans-serif;
+  background: linear-gradient(#804fb3, #9969c7, #b589d6);
+  color: #e6d1f2;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+p {
+  font-weight: 400;
+}
