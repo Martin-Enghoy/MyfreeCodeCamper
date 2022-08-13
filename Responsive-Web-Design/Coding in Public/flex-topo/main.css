@@ -1,4 +1,8 @@
 :root {
+  /* Page Coloring */
+  --text: #e6d1f2;
+  --bg--nav: #301934;
+
   /* Font Sizing */
   --step--2: clamp(0.91rem, calc(0.89rem + 0.1vw), 0.96rem);
   --step--1: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
@@ -43,11 +47,20 @@
 body {
   font-family: "Proxima Soft", sans-serif;
   background: linear-gradient(#804fb3, #9969c7, #b589d6);
-  color: #e6d1f2;
+  color: var(--text);
   min-height: 100vh;
   display: grid;
   place-content: center;
   gap: 1vmax;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding-block: 1.2rem;
+  background-color: transparent;
+  transition: background-color 800ms cubic-bezier(64, 0.04, 0.26, 0.87);
 }
 
 h1 {
