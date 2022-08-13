@@ -9,5 +9,3 @@ navBtn.addEventListener("click", () => {
   navBtn.setAttribute("aria-expanded", !isExpanded);
   !isExpanded && nav.classList.add("active");
 });
-
-window.addEventListener("DOMContentLoaded", () => {});
